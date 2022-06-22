@@ -1,0 +1,163 @@
+@charset "utf-8";
+html { 
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width:auto;
+    height:1800px;
+    margin: 0 auto;
+}
+
+/*
+*ヘッダー
+*/
+.page-header{
+    margin-right:20px;
+}
+.header-nav{
+    display:flex;
+    font-size:2rem;
+    text-transform: uppercase;
+    margin-top :35px;
+    list-style: none;
+}
+
+.header-nav li{
+    margin-left:36px;
+}
+    
+.header-nav a{
+    text-decoration: none;
+    opacity:.3;
+    color:black;
+}
+.header-nav:hover li a{
+   
+    transition: .3s;
+}
+.header-nav li a:hover{
+    color:#0bd;
+}
+.page-header{
+    display:flex;
+    justify-content: flex-end;
+
+}
+
+.listitem {
+    position: relative;
+    z-index:1;
+    font-family: 'Raleway', sans-serif;
+}
+.listitem::after {
+    opacity:.3;
+    border-bottom: solid 2px #000;
+    bottom: 0;
+    content: "";
+    display: block;
+    transition: all .3s ease;
+    -webkit-transition: all 1s ease;
+    width: 0;
+  }
+  .listitem:hover::after {
+    width: 100%;
+  }
+  /*
+  *ここまでヘッダー
+  */
+ 
+  /*
+  *トップ画面
+  */
+  .main{
+      margin:0 20px 250px 20px;
+      background-image: url(images/pic1.JPG);
+      background-repeat: no-repeat;
+      height: 600px;
+      background-position: right;
+  }
+  .main h4{
+    padding-top:480px;
+    padding-left:15px;
+    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    opacity:0.6;
+  }
+
+  .main p{
+    font-size:1.5rem;
+    font-weight: 100;
+    margin-left: 20px;
+    margin-top:5px;
+    font-family: 'Raleway', sans-serif;
+  }
+  .head-color{
+      color:#0bd;
+      
+  }
+  /*
+  *ここまでトップ画面
+  */
+
+  /*
+  *profile
+  *
+  */
+  .title {
+      text-align:center;
+      font-size:2rem;
+      font-family: 'Raleway', sans-serif;
+      color:#333;
+      opacity:0.8;
+     
+  }
+.container{
+    width:100%;
+    height:700px;
+    padding: 40px 10px;
+    margin-bottom:50px;
+    border: 2px solid #333;
+    border-radius: 10px;
+
+}
+.content{
+    float:left;
+    margin-left:-50px;
+
+}
+.content-img {
+    margin-left:30%;
+}
+.content-exp{
+    margin-left:30%;
+    width:420px;
+    color:#333;
+}
+.content-exp h3{
+    padding-top:20px;
+    border-bottom:2px #333 solid;
+}
+.content-exp span{
+    color:#808080;
+}
+.content-exp p{
+    padding-top:10px;
+    font-size: 1.5rem;
+}
+
+.content-profile{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.content-exp1{
+    text-align: center;
+}
+.page-footer{
+    display:flex;
+}
+.page-footer small{
+    margin: 0 auto;
+}
+
