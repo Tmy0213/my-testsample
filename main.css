@@ -72,7 +72,7 @@ body{
   */
   .main{
       margin:0 20px 250px 20px;
-      background-image: url("https://github.com/Tmy0213/tmy0213.github.io/blob/main/pic1.JPG?raw=true");
+      background-image: url(https://github.com/Tmy0213/tmy0213.github.io/blob/main/pic1.JPG?raw=true);
       background-repeat: no-repeat;
       height: 600px;
       background-position: right;
