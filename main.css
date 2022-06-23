@@ -76,6 +76,7 @@ body{
       background-repeat: no-repeat;
       height: 600px;
       background-position: right;
+      text-shadow: 1px 2px 3px #fff;
   }
   .main h4{
     padding-top:480px;
@@ -84,6 +85,7 @@ body{
     font-family: 'Raleway', sans-serif;
     color:black;
     opacity:0.6;
+    
   }
 
   .main p{
@@ -115,24 +117,21 @@ body{
   }
 .container{
     width:100%;
-    height:700px;
-    padding: 40px 10px;
+    height:800px;
+    padding: 0 10px;
     margin-bottom:50px;
     border: 2px solid #333;
     border-radius: 10px;
+    display:flex;
 
 }
-.content{
-    float:left;
-    margin-left:-50px;
 
-}
 .content-img {
-    margin-left:30%;
+    margin: 0 10%;
 }
 .content-exp{
-    margin-left:30%;
-    width:420px;
+    margin: 15% 10%;
+    width:380px;
     color:#333;
 }
 .content-exp h3{
@@ -148,12 +147,27 @@ body{
 }
 
 .content-profile{
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
+    padding-top:50px;
+    margin-left:50px;
 }
 .content-exp1{
     text-align: center;
 }
+.content-skill{
+    padding-top:30px;
+}
+.content-skill h3{
+    padding:15px; 
+    margin : 0 auto;
+    width:120px;
+
+}
+.content-skill p{
+   font-size:1.3rem;
+}
+
 .page-footer{
     display:flex;
 }
