@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="portfolio.css">
+        <!-- <script type="text/javascript" src="change-pic.js"></script> -->
         <title>my portfolio</title>
     </head>    
 <body>
@@ -16,27 +17,83 @@
         <a id="top"></a>
         <nav>
             <ul class="header-nav">
-                <li><a class="listitem" href="https://tmy0213.github.io/MyPortfolio.html">HOME</a></li>
+                <li><a class="listitem" href="main.html">HOME</a></li>
                 <li class="listitem" style="color:#0bd; opacity:0.3;">PORTFOLIO1</li>
                 <li><a class="listitem" href="portfolio2.html">PORTFOLIO2</a></li>
             </ul>
         </nav> 
     </header>
     <div class="main">
-        <div class="main-title">
-            <p>PORTFOLIO1</p>
-        </div>
         <div class="container">
-            <div class="title">
-                <p>料理のカロリー検索システム</p>
+            <div class="main-title">
+                <p>PORTFOLIO1</p>
+            </div>
+            <div class="sub-title">
+                <p>《カロリー検索システム》</p>
+                <a href="https://github.com/Tmy0213/Caloriecheck/tree/master" target="_blank">ソースコード</a>
+            </div>
+            <div class="slideShow">
+                <ul class="imgWrap">
+                    <li class="is-show"><img src="images/ログイン画面(1).jpg"></li>
+                    <li><img src="images/検索ホーム(2).jpg"></li>
+                    <li><img src="images/画像(11).jpg"></li>
+                    <li><img src="images/更新画面(7).jpg"></li>
+                    <li><img src="images/新規登録画面(8).jpg"></li>
+                    <li><img src="images/削除実行前(5).jpg"></li>
+                </ul>
+                <button class="btn-prev">▼</button>
+                <button class="btn-next">▼</button>
             </div>
             <div class="exp">
-                <p>ログイン画面</p>
-                <a href="#"><img src="images/ログイン画面(1).jpg"></a>
+                <p>◇制作目的</p>
+                <p>・職業訓練で学習した技術、知識と今までの料理の知識をかけ合わせひとつのアプリケーションを形にすること</p> 
             </div>
-        </div>
-
+        </div> 
     </div>
+    <footer class="page-footer">
+        <small>&copy;Oshida Tomoya</small>
+    </footer> 
+    <script>
+        const slideShow = function () {
+
+        const images = document.querySelectorAll( '.imgWrap li' ),
+            imagesLength = images.length - 1,
+            next = document.querySelector( '.btn-next' ),
+            prev = document.querySelector( '.btn-prev' );
+
+        let cnt = 0;
+
+        function showNext () {
+            if ( cnt >= imagesLength ) {
+                cnt = 0;
+                images.item( cnt ).classList.add( 'is-show' );
+                images.item( imagesLength ).classList.remove( 'is-show' );
+            } else {
+                images.item( cnt ).classList.remove( 'is-show' );
+                images.item( cnt + 1 ).classList.add( 'is-show' );
+                cnt += 1;
+            }
+        }
+
+        function showPrev () {
+            if ( cnt === 0 ) {
+                images.item( cnt ).classList.remove( 'is-show' );
+                images.item( imagesLength ).classList.add( 'is-show' );
+                cnt = imagesLength;
+            } else {
+                images.item( cnt ).classList.remove( 'is-show' );
+                images.item( cnt - 1 ).classList.add( 'is-show' );
+                cnt -= 1;
+            }
+        }
+
+        next.addEventListener( 'click', showNext );
+        prev.addEventListener( 'click', showPrev );
+
+        };
+
+        slideShow();
+    </script>
     
 </body>    
 </html>
