@@ -5,7 +5,7 @@ html {
 
 body{
     max-width:auto;
-    height:2000px;
+    height:1000px;
     margin: 0 auto;
 }
 
@@ -14,6 +14,7 @@ body{
 */
 .page-header{
     margin-right:20px;
+    margin-bottom: 30px;
 }
 .header-nav{
     display:flex;
@@ -63,9 +64,111 @@ body{
   .listitem:hover::after {
     width: 100%;
   }
+  .container{
+    margin-top:80px;
+  }
 
   .main{
-    width:100%;
-    height:600px;
-    
+    width:80%;
+    height:750px;
+    margin: 0 auto;
+    border:2px #a39494e0 solid;
+    border-radius: 10px;;
   }
+  .main-title{
+    text-align:center;
+    font-size: 1.8rem;
+    opacity: 0.5;  
+    width:200px;
+    margin: 0 auto;
+  }
+  .main-title p{
+    margin-top:20px;
+    border-bottom:2px #333 solid;
+  }
+.sub-title {
+    font-size: 1.2rem;
+    margin-left: 25%;
+}
+  .slideShow {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.slideShow ul.imgWrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.slideShow ul.imgWrap li {
+    display: none;
+    width: 100%;
+    list-style-type: none;
+}
+
+.slideShow ul.imgWrap li.is-show {
+    display: block;
+    animation: slideAnime 300ms ease-out 0ms 1 normal both;
+}
+
+@keyframes slideAnime {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.slideShow ul.imgWrap li img {
+    width: 100%;
+}
+
+.slideShow button {
+    display: block;
+    position: absolute;
+    top: calc( 50% - 20px );
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    padding: 4px 0 0 0;
+    background: #7cd7ee;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.3em;
+    outline: none;
+    transition: transform 200ms;
+}
+
+.slideShow button.btn-prev {
+    left: -50px;
+    transform: rotate( 90deg );
+}
+
+.slideShow button.btn-prev:hover {
+    transform: rotate( 90deg ) scale( 1.1 );
+}
+
+.slideShow button.btn-next {
+    right: -50px;
+    transform: rotate( -90deg );
+}
+
+.slideShow button.btn-next:hover {
+    transform: rotate( -90deg ) scale( 1.1 );
+}
+.exp{
+    margin-top:30px;
+    text-align: center;
+}
+.page-footer{
+    margin-top:100px;
+    display:flex;
+    background-color: gray;
+}
+.page-footer small{
+    margin: 0 auto;
+    color:white;
+}
+
+
+
