@@ -70,10 +70,10 @@ body{
 
   .main{
     width:80%;
-    height:750px;
+    height:auto;
     margin: 0 auto;
     border:2px #a39494e0 solid;
-    border-radius: 10px;;
+    border-radius: 10px;
   }
   .main-title{
     text-align:center;
@@ -82,13 +82,18 @@ body{
     width:200px;
     margin: 0 auto;
   }
-  .main-title p{
+  .main-title h1{
     margin-top:20px;
     border-bottom:2px #333 solid;
   }
 .sub-title {
     font-size: 1.2rem;
-    margin-left: 25%;
+    margin:2.5rem 25% 20px;
+
+}
+
+.sub-title a{
+    color:aqua;
 }
   .slideShow {
     position: relative;
@@ -110,6 +115,7 @@ body{
 .slideShow ul.imgWrap li.is-show {
     display: block;
     animation: slideAnime 300ms ease-out 0ms 1 normal both;
+    box-shadow: #333 10px 10px 30px;
 }
 
 @keyframes slideAnime {
@@ -156,10 +162,7 @@ button {
 .btn-next:hover {
     transform: rotate( -90deg ) scale( 1.1 );
 }
-.exp{
-    margin-top:30px;
-    text-align: center;
-}
+
 .page-footer{
     margin-top:100px;
     display:flex;
@@ -170,7 +173,19 @@ button {
     margin: 0 auto;
     color:white;
 }
-
-
+.content{
+    width:50%;
+    margin:15px auto;
+    padding:0;
+    border:2px #a39494e0  solid;
+    border-radius: 10px;
+}
+table{
+    margin: 60px auto;
+}
+th{
+    width:6rem;
+    padding-bottom: 5px;
+}
 
 
