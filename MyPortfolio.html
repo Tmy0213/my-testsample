@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="content">
                     <div class="content-img">
-                        <img src="https://github.com/Tmy0213/tmy0213.github.io/blob/main/self.jpg?raw=true">
+                        <img src="images/self.jpg">
                     </div>
                     <div class="content-exp">        
                         <h3>押田　知也<span>　Oshida Tomoya</span></h3>
@@ -65,10 +65,52 @@
                 </div>
             </div>     
         </div>
-      <footer class="page-footer">
+        <footer class="page-footer">
             <a href="#top">^TOP</a>
             <small>&copy;Oshida Tomoya</small>
-        </footer>   
+        </footer> 
+        <script>
+
+const slideShow = function () {
+
+const images = document.querySelectorAll( '.slideShow ul.imgWrap li' ),
+      imagesLength = images.length - 1,
+      next = document.querySelector( '.slideShow .btn-next' ),
+      prev = document.querySelector( '.slideShow .btn-prev' );
+
+let cnt = 0;
+
+function showNext () {
+    if ( cnt >= imagesLength ) {
+        cnt = 0;
+        images.item( cnt ).classList.add( 'is-show' );
+        images.item( imagesLength ).classList.remove( 'is-show' );
+    } else {
+        images.item( cnt ).classList.remove( 'is-show' );
+        images.item( cnt + 1 ).classList.add( 'is-show' );
+        cnt += 1;
+    }
+}
+
+function showPrev () {
+    if ( cnt === 0 ) {
+        images.item( cnt ).classList.remove( 'is-show' );
+        images.item( imagesLength ).classList.add( 'is-show' );
+        cnt = imagesLength;
+    } else {
+        images.item( cnt ).classList.remove( 'is-show' );
+        images.item( cnt - 1 ).classList.add( 'is-show' );
+        cnt -= 1;
+    }
+}
+
+next.addEventListener( 'click', showNext );
+prev.addEventListener( 'click', showPrev );
+
+};
+
+slideShow();
+        </script>  
         
 </body>    
 </html>
