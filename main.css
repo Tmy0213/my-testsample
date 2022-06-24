@@ -171,6 +171,7 @@ body{
 .page-footer{
     display:flex;
     background-color: gray;
+    height:30px;
 }
 .page-footer small{
     margin: 0 auto;
